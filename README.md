@@ -138,3 +138,13 @@ a.close
 
 c드라이브 test디렉터리에 새파일.txt라는 추가모드(a) 파일을 열고, write를 통해 기존에 있던 내용 다음부터 값을 적기 시작한다.
 
+## with문 사용하기
+```python
+with open("C:/test/새파일2.txt", "w") as a:
+    a.write("hello, world")
+```
+### 결과값
+![image](https://user-images.githubusercontent.com/104752580/226522016-046720e5-ec6a-40ad-9cd3-185615268664.png)
+![image](https://user-images.githubusercontent.com/104752580/226522041-3582f197-5537-4d25-bd7e-ddb7be3d7b97.png)
+
+with는 open과 close를 자동으로 처리할 수 있는 역할로 만들어졌다.

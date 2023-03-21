@@ -45,18 +45,17 @@ end=" "는 한줄 출력을 하는 방법이다.
 ## 파일 생성하기
 ```python
 a = open("새파일.txt", 'w')
-print("hello")
 a.close()
 ```
-### 결과 값
-![image](https://user-images.githubusercontent.com/104752580/226497252-b812d278-a559-4818-b3ee-81dd8345767f.png)
+### 파일열기 모드
+![image](https://user-images.githubusercontent.com/104752580/226497360-ee277cc4-7d4b-490a-9a12-aaea8e3e95cc.png)
 
-open 함수로 파일을 열고, close 함수로 파일을 닫는다. 
+open 함수로 파일을 쓰기모드(w)로 열고, close 함수로 파일을 닫는다. 
 
 파이썬에서 파일경로를 표시할 때는 슬래시(/)로 사용한다.
 
 역슬래시(\)를 사용하려면 \\와 같이 두개를 사용하거나 문자열앞에 r을 붙여 사용해야한다.(\n과 같이 이스케이프 문자가 있을 경우 의도했던 파일 경로와 달라지기 때문이다.
 
 ###### ※ 파일을 지정 디렉터리에 생성하려면 (C:/디렉터리/파일.txt)로 쓴다.
-### 파일열기 모드
-![image](https://user-images.githubusercontent.com/104752580/226497360-ee277cc4-7d4b-490a-9a12-aaea8e3e95cc.png)
+## 파일을 쓰기 모드로 열어 내용 쓰기(w)
+

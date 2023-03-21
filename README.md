@@ -73,7 +73,7 @@ a.close()
 
 ![image](https://user-images.githubusercontent.com/104752580/226498445-81f8cf01-2576-4b06-94a6-5f31db5d2fd9.png)
 
-c드라이브 test디렉터리에 새파일.txt라는 쓰기모드(w) 파일을 생성하고, write 함수를 통해 값을 적는다. 
+c드라이브 test디렉터리에 새파일.txt라는 쓰기모드(w) 파일을 열고, write 함수를 통해 값을 적는다. 
 ## 파일을 읽는 여러 가지 방법 (r:읽기모드)
 ### readline 함수 이용하기
 ```python
@@ -87,7 +87,7 @@ a.close()
 ### 결과값
 ![image](https://user-images.githubusercontent.com/104752580/226501725-1d77c25d-036a-4cf2-bf91-c6b20ca98b6a.png)
 
-c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 생성하고, readline 함수를 통해 한줄씩 읽어드린다.
+c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 열고, readline 함수를 통해 한줄씩 읽어드린다.
 
 이때 while문을 써서 읽을 줄이 없을때까지 반복하여 읽고, 줄이 없으면 break문으로 while문을 벗어난다. 
 ### readlines 함수 사용하기
@@ -101,7 +101,7 @@ a.close()
 ### 결과값
 ![image](https://user-images.githubusercontent.com/104752580/226502399-2e2ec5bf-5c20-47c7-947a-43e970aaf772.png)
 
-c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 생성하고, readlines 함수를 통해 모든줄을 읽어서 각각 줄의 요소로 갖는 리스트를 리턴한다.
+c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 열고, readlines 함수를 통해 모든줄을 읽어서 각각 줄의 요소로 갖는 리스트를 리턴한다.
 ###### ※ readline과 readlines를 사용할 때 줄바꿈(\n)을 제거하려면 변수.strip()하는 strip함수를 사용해 제거할 수 있다.
 ### read 함수 사용하기
 ```python
@@ -113,7 +113,7 @@ a.close()
 ### 결과값
 ![image](https://user-images.githubusercontent.com/104752580/226502937-fb4b119c-efe5-4c08-8dbe-3f2498cf5d14.png)
 
-c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 생성하고, read 함수를 통해 파일 전체 내용을 읽어드린다.
+c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 열고, read 함수를 통해 파일 전체 내용을 읽어드린다.
 ### for문 사용하기
 ```python
 a = open("C:/test/새파일.txt", 'r')
@@ -124,7 +124,17 @@ a.close()
 ### 결과값
 ![image](https://user-images.githubusercontent.com/104752580/226503357-9794d793-9071-4176-bb46-0a7a8365aa00.png)
 
-c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 생성하고, for문을 사용하여 줄단위로 읽어드린다.
+c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 열고, for문을 사용하여 줄단위로 읽어드린다.
 ## 파일에 새로운 내용 추가하기 (a:추가 모드)
+```python
+a = open("C:/test/새파일.txt", 'a')
+for b in range(11,20) :
+    c = "%d번째 줄입니다.\n" % b
+    a.write(c)
+a.close
+```
+### 결과값
+![image](https://user-images.githubusercontent.com/104752580/226515233-c3843ab4-43d2-418a-a5b4-ceafeefdc7aa.png)
 
+c드라이브 test디렉터리에 새파일.txt라는 추가모드(a) 파일을 열고, write를 통해 기존에 있던 내용 다음부터 값을 적기 시작한다.
 

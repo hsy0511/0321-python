@@ -57,7 +57,7 @@ open 함수로 파일을 쓰기모드(w)로 열고, close 함수로 파일을 �
 역슬래시(\)를 사용하려면 \\와 같이 두개를 사용하거나 문자열앞에 r을 붙여 사용해야한다.(\n과 같이 이스케이프 문자가 있을 경우 의도했던 파일 경로와 달라지기 때문이다.
 
 ###### ※ 파일을 지정 디렉터리에 생성하려면 (C:/디렉터리/파일.txt)로 쓴다.
-## 파일을 쓰기 모드로 열어 내용 쓰기(w:쓰기모드)
+## 파일을 쓰기 모드로 열어 내용 쓰기 (w:쓰기모드)
 ```python
 a = open("C:/test/새파일.txt", 'w')
 for b in range(1, 11):
@@ -70,7 +70,7 @@ a.close()
 ![image](https://user-images.githubusercontent.com/104752580/226498445-81f8cf01-2576-4b06-94a6-5f31db5d2fd9.png)
 
 c드라이브 test디렉터리에 새파일.txt라는 쓰기모드(w) 파일을 생성하고, write 함수를 통해 값을 적는다. 
-## 파일을 읽는 여러 가지 방법(r:읽기모드)
+## 파일을 읽는 여러 가지 방법 (r:읽기모드)
 ### readline 함수 이용하기
 ```python
 a = open("C:/test/새파일.txt", 'r')
@@ -97,5 +97,30 @@ a.close()
 ### 결과값
 ![image](https://user-images.githubusercontent.com/104752580/226502399-2e2ec5bf-5c20-47c7-947a-43e970aaf772.png)
 
-c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 생성하고, readlines 함수를 통해 모든줄을 읽어드린다.
-###### ※ 읽기모드(r)를 사용할 때 줄바꿈(\n)을 제거하려면 변수.strip()하는 strip함수를 사용해 제거할 수 있다.
+c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 생성하고, readlines 함수를 통해 모든줄을 읽어서 각각 줄의 요소로 갖는 리스트를 리턴한다.
+###### ※ readline과 readlines를 사용할 때 줄바꿈(\n)을 제거하려면 변수.strip()하는 strip함수를 사용해 제거할 수 있다.
+### read 함수 사용하기
+```python
+a = open("C:/test/새파일.txt", 'r')
+b = a.read()
+print(b)
+a.close()
+```
+### 결과값
+![image](https://user-images.githubusercontent.com/104752580/226502937-fb4b119c-efe5-4c08-8dbe-3f2498cf5d14.png)
+
+c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 생성하고, read 함수를 통해 파일 전체 내용을 읽어드린다.
+### for문 사용하기
+```python
+a = open("C:/test/새파일.txt", 'r')
+for b in a:
+    print(b)
+a.close()
+```
+### 결과값
+![image](https://user-images.githubusercontent.com/104752580/226503357-9794d793-9071-4176-bb46-0a7a8365aa00.png)
+
+c드라이브 test디렉터리에 새파일.txt라는 읽기모드(r) 파일을 생성하고, for문을 사용하여 줄단위로 읽어드린다.
+## 파일에 새로운 내용 추가하기 (a:추가 모드)
+
+

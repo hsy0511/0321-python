@@ -69,7 +69,9 @@ a.close()
 ```
 ### 결과값
 ![image](https://user-images.githubusercontent.com/104752580/226498395-e6f4f2b8-913f-4453-aabe-ab7366ff8a6f.png)
+
 =======================================================================================================================
+
 ![image](https://user-images.githubusercontent.com/104752580/226498445-81f8cf01-2576-4b06-94a6-5f31db5d2fd9.png)
 
 c드라이브 test디렉터리에 새파일.txt라는 쓰기모드(w) 파일을 생성하고, write 함수를 통해 값을 적는다. 

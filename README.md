@@ -25,7 +25,7 @@ print(c)
 변수 a,b,c의 값을 print로 출력한다.
 ## print 기타 사용법
 ```python
-print("music" "is" "mylife")
+print("music" "is" "my" "life")
 
 print("music","is","my","life")
 
